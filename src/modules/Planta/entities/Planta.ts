@@ -16,6 +16,7 @@ export class Planta {
     private adubacoes: string[] = [];
 
 
+
     constructor(props: Replace<PlantaSchema, { createdAt?: Date }>, id?: string) {
         this._id = id || randomUUID();
         this.props ={

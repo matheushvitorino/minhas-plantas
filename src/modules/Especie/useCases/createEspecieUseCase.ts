@@ -10,6 +10,9 @@ interface EspecieSchema{
 export class CreateEspecieUseCase{
     constructor(private especieRepository:EspecieRepository){}
     async execute({nome,descricao}:EspecieSchema){
+        if(!nome || nome.trim() === ""){
+            throw new Error("Nome é obrigatório!")
+        }
         const especie = new Especie({
             nome,
             descricao,

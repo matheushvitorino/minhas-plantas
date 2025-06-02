@@ -3,7 +3,7 @@ import { PlantaRepository } from "../repositories/PlantaRepository";
 import { Planta } from "../entities/Planta";
 
 @Injectable()
-export class findAllPlantaUseCase{
+export class FindAllPlantaUseCase{
     constructor(private plantaRepository: PlantaRepository){}
     async execute(): Promise<Planta[]>{
         try{const plantas = await this.plantaRepository.findAll();
