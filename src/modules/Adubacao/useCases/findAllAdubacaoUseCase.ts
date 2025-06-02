@@ -3,7 +3,7 @@ import { AdubacaoRepository } from "../repositories/adubacaoRepository";
 import { Adubacao } from "../entites/Adubacao";
 
 @Injectable()
-export class ListarAdubacaoUseCase{
+export class FindAllAdubacaoUseCase{
     constructor( private adubacaoRepository: AdubacaoRepository){}
 
     async execute(): Promise<Adubacao[]>{

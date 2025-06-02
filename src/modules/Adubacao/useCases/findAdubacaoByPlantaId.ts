@@ -7,10 +7,10 @@ interface ListarAdubacaoPlantaRequest{
 }
 
 @Injectable()
-export class ListarAdubacaoPlantaUseCase{
+export class FindAdubacoesByPlantaId{
     constructor(private adubacaoRepository: AdubacaoRepository){}
     async execute({id}:ListarAdubacaoPlantaRequest): Promise<Adubacao[]>{
-        const adubacoes = await this.adubacaoRepository.findByPlanta(id)
+        const adubacoes = await this.adubacaoRepository.findAdubacoesByPlantaId(id)
         return adubacoes;
     }
 }

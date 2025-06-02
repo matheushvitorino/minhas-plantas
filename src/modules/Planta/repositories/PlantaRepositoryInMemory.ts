@@ -27,16 +27,9 @@
                 throw new Error("Não conseguiu localizar o id especificado.")
             }
         }
-        async update(id: string, planta: Planta): Promise<void> {
-            const planta_id = this.plantas.findIndex(planta => planta.id === id)
-            if (planta_id !== -1){
-
+        async update( planta: Planta): Promise<void> {
+            const planta_id = planta.id
                 this.plantas[planta_id] = planta
-                
-            }else{
-                throw new Error("Planta não encontrada.")
-            }
-
             
         }
 

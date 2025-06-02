@@ -3,7 +3,7 @@ import { PlantaRepository } from "../repositories/PlantaRepository";
 import { Planta } from "../entities/Planta";
 
 interface UpdatePlantaRequest{
-    id:string
+    id:string;
     nome: string;
     descricao?: string;
     especie_id: string;
@@ -12,7 +12,8 @@ interface UpdatePlantaRequest{
 export class UpdatePlantaUseCase{
     constructor(private plantaRepository:PlantaRepository){}
 
-    execute({nome,descricao,especie_id}:UpdatePlantaRequest){
+
+    execute({id,nome,descricao,especie_id}:UpdatePlantaRequest){
         const planta = new Planta({
             nome,
             descricao,

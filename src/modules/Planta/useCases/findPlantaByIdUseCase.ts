@@ -6,7 +6,7 @@ interface FindPlantaByIdRequest{
 }
 
 @Injectable()
-export class FindPlantaById{
+export class FindPlantaByIdUseCase{
     constructor(private plantaRepository:PlantaRepository){}
 
      execute({id}:FindPlantaByIdRequest){

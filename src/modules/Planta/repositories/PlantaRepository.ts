@@ -7,6 +7,6 @@ export abstract class PlantaRepository{
     abstract findByName(nome:string): Promise<Planta | null>;
     abstract findAll(): Promise<Planta[]>;
     abstract delete(id: string): Promise<void>;
-    abstract update(id:string,planta: Planta): Promise<void>;
+    abstract update(planta: Planta): Promise<void>;
 
 }
