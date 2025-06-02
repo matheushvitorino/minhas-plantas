@@ -2,10 +2,10 @@ import { Injectable } from "@nestjs/common";
 import { EspecieRepository } from "../repositories/especieRepository";
 
 @Injectable()
-export class ListarEspecieUseCase{
+export class FindAllEspecieUseCase{
     constructor( private especieRepository: EspecieRepository){}
 
-    async findAll(){
+    async execute(){
         try{
             const especies = await this.especieRepository.findAll()
             return especies;
